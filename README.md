@@ -2,7 +2,8 @@
 
 ## description
 
-这是一个在帮助国际化项目，根据'xx.xx.xx'或者最后一个名字xx，选中，快速寻找翻译的文本的插件。
+这是帮助国际化项目快速得到翻译内容的插件<br>
+可以根据选中的'xx.xx.xx'或者最后一个名字xx，右键，得到翻译的文本的插件。
 
 This is a plugin designed to assist internationalization projects. It allows you to quickly locate translated texts based on 'xx.xx.xx' notation or the last name 'xx'.
 ## development build
@@ -15,7 +16,7 @@ vsce package --no-yarn
 1.可同时设置多个项目的i18n配置<br>
 2.可配置目录或者文件(目录会解析第一层的文件)
 
-1.You can simultaneously configure the i18n settings for multiple projects.
+1.You can simultaneously configure the i18n settings for multiple projects.<br>
 2.You can configure directories or files (directories will parse the files in the first layer).
 
 ## Requirements
@@ -52,6 +53,9 @@ When configuring paths, you need to use escape characters or change the backslas
 选中'xx.xx.xx' 字符串或者最后一个xx字符串，然后右键选择i18nHelper ,就可以看到翻译后的文本
 
 Select the 'xx.xx.xx' string or the last 'xx' string, then right-click and choose i18nHelper. This action will display the translated text for you.
+
+![config](images/config.png)
+![usage](images/usage.png)
 
 ## contact
 
