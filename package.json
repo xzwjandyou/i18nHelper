@@ -3,7 +3,7 @@
   "displayName": "i18nHelperForever",
   "publisher":"xiaoyuer",
   "description": "",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "engines": {
     "vscode": "^1.48.0"
   },
@@ -24,7 +24,7 @@
       "editor/context": [
         {
           "command": "extension.myCommand",
-          "group": "z_commands",
+          "group": "navigation",
           "when": "editorFocus"
         }
       ]
