@@ -63,15 +63,25 @@ When configuring paths, you need to use escape characters or change the backslas
 
 Select the 'xx.xx.xx' string or the last 'xx' string, then right-click and choose i18nHelper. This action will display the translated text for you.
 
+一、选中词汇并翻译<br>
 ![config](images/config.png)
 ![usage](images/usage.png)
+
+二、国际化开发辅助工具<br>
+
+![collect1](images/collect1.png)
+![collect2](images/collect2.png)
+![result1](images/result1.png)
+![result2](images/result2.png)
+![replace1](images/replace1.png)
+![replace2](images/replace2.png)
+![config2](images/config2.png)
 
 ## contact
 
 if you have some question ,please contact me.
 573068185@qq.com
 
-### 1.0.0
 
 
 
