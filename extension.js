@@ -4,10 +4,7 @@ const vscode = require('vscode');
 const path = require('path');
 const fs = require('fs');
 // import * as fs from 'fs';
-const { traditionalized } = require('./util');
-
-let baseText = '';
-let i18nArray = [];
+const { traditionalized, setData, getData } = require('./util');
 
 const I18nFileType = {
 	Directory: '0',
@@ -178,6 +175,9 @@ function activate(context) {
 		const config = vscode.workspace.getConfiguration('i18nhelper');
 		const funcName = config.get('funcName');
 
+		let baseText = getData(context, 'baseText') || '';
+		let i18nArray = getData(context, 'i18nArray') || [];
+
 		// 获取当前编辑器
 		const editor = vscode.window.activeTextEditor;
 		if (editor) {
@@ -198,6 +198,7 @@ function activate(context) {
 			}
 			const array = userInput.split('.');
 			baseText = array.slice(0, array.length - 1).join('.') + '.';
+			setData(context ,'baseText', baseText);
 			let currentName = '';
 			console.log('array', array);
 			if (array.length) {
@@ -209,6 +210,7 @@ function activate(context) {
 			const item = { name: `${baseText}${currentName}`, func: funcName, text: selectedText };
 			i18nArray.push(item);
 			console.log(i18nArray);
+			setData(context, 'i18nArray', i18nArray);
 			vscode.window.showInformationMessage(`${selectedText}-国际化已保存`);
 
 			// const document = await vscode.workspace.openTextDocument({
@@ -226,6 +228,7 @@ function activate(context) {
 	const translateClear = vscode.commands.registerCommand('extension.translateClear', async () => {
 		// 获取当前编辑器
 		const editor = vscode.window.activeTextEditor;
+		let i18nArray = getData(context, 'i18nArray') || [];
 		if (editor) {
 			const confirmation = await vscode.window.showInformationMessage(
 				`确认要清除国际化缓存吗？`,
@@ -234,6 +237,7 @@ function activate(context) {
 			);
 			if (confirmation === '确认') {
 				i18nArray = [];
+				setData(context, 'i18nArray', i18nArray);
 				vscode.window.showInformationMessage(`清理缓存成功`);
 			}
 		}
@@ -243,6 +247,7 @@ function activate(context) {
 	// 转换结果
 	const translateResult = vscode.commands.registerCommand('extension.translateResult', async () => {
 
+		let i18nArray = getData(context, 'i18nArray') || [];
 		const config = vscode.workspace.getConfiguration('i18nhelper');
 		let funcName = config.get('funcName');
 		const array = funcName.split('-');
@@ -306,6 +311,7 @@ function activate(context) {
 	// 替换文本
 	const translateReplace = vscode.commands.registerCommand('extension.translateReplace', async () => {
 
+		let i18nArray = getData(context, 'i18nArray') || [];
 		const config = vscode.workspace.getConfiguration('i18nhelper');
 		let funcName = config.get('funcName');
 		const array = funcName.split('-');

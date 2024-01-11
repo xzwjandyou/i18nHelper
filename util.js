@@ -18,4 +18,17 @@ function traditionalized(cc) {
     return str;
 }
 
-module.exports = { traditionalized };
+function setData(context, key, value) {
+    // 保存数据到 globalState
+    context.globalState.update(key, value);
+}
+
+function getData(context, key) {
+    return context.globalState.get(key);
+}
+    
+
+
+
+
+module.exports = { traditionalized, setData, getData };
