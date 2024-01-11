@@ -352,6 +352,7 @@ function activate(context) {
 					editBuilder.replace(selection, `${funcName}(${obj})`);
 					vscode.window.showInformationMessage('替换成功');
 				});
+				return;
 			}
 			vscode.window.showInformationMessage('没有找到可替换的国际化文本');
 			return;
