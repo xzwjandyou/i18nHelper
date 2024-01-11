@@ -12,12 +12,21 @@ vsce package --no-yarn
 
 ## Features
 
-
+一、选中词汇并翻译<br>
 1.可同时设置多个项目的i18n配置<br>
-2.可配置目录或者文件(目录会解析第一层的文件)
+2.可配置目录或者文件(目录会解析第一层的文件)<br>
+二、国际化开发辅助工具<br>
+1.根据中文含义批量生成国际化资源<br>
+2.快速替换当前区域为正确的国际化文本<br>
 
+一、translate the selected vocabulary<br>
 1.You can simultaneously configure the i18n settings for multiple projects.<br>
-2.You can configure directories or files (directories will parse the files in the first layer).
+2.You can configure directories or files (directories will parse the files in the first layer).<br>
+
+二、国际化开发辅助工具<br>
+1.根据中文含义批量生成国际化资源<br>
+2.快速替换当前区域为正确的国际化文本<br>
+
 
 ## Requirements
 

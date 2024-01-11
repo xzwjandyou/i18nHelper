@@ -3,7 +3,7 @@
   "displayName": "i18nHelperForever",
   "publisher":"xiaoyuer",
   "description": "",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "engines": {
     "vscode": "^1.48.0"
   },
@@ -26,6 +26,26 @@
           "command": "extension.myCommand",
           "group": "navigation",
           "when": "editorFocus"
+        },
+        {
+          "command": "extension.translateCollect",
+          "group": "navigation",
+          "when": "editorFocus"
+        },
+        {
+          "command": "extension.translateClear",
+          "group": "navigation",
+          "when": "editorFocus"
+        },
+        {
+          "command": "extension.translateReplace",
+          "group": "navigation",
+          "when": "editorFocus"
+        },
+        {
+          "command": "extension.translateResult",
+          "group": "navigation",
+          "when": "editorFocus"
         }
       ]
     },
@@ -33,6 +53,22 @@
       {
         "command": "extension.myCommand",
         "title": "i18nHelper"
+      },
+      {
+        "command": "extension.translateCollect",
+        "title": "i18nHelperTranslateCollect"
+      },
+      {
+        "command": "extension.translateClear",
+        "title": "i18nHelperTranslateClear"
+      },
+      {
+        "command": "extension.translateResult",
+        "title": "i18nHelperTranslateResult"
+      },
+      {
+        "command": "extension.translateReplace",
+        "title": "i18nHelperTranslateReplace"
       },
       {
         "command": "extension.showMultilineMessage",
@@ -45,6 +81,11 @@
         "i18nhelper.i18nPathDirectory": {
           "type": "array",
           "default": [],
+          "description": "multiple projects paths"
+        },
+        "i18nhelper.funcName": {
+          "type": "string",
+          "default": "formateMessage-id",
           "description": "multiple projects paths"
         }
       }
