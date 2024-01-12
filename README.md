@@ -64,18 +64,27 @@ When configuring paths, you need to use escape characters or change the backslas
 Select the 'xx.xx.xx' string or the last 'xx' string, then right-click and choose i18nHelper. This action will display the translated text for you.
 
 一、选中词汇并翻译<br>
-![config](images/config.png)
-![usage](images/usage.png)
+setting配置i18n资源位置<br>
+![config](images/config.png)<br>
+选中国际化资源右键点击查询翻译内容
+![usage](images/usage.png)<br>
 
 二、国际化开发辅助工具<br>
-
-![collect1](images/collect1.png)
-![collect2](images/collect2.png)
-![result1](images/result1.png)
-![result2](images/result2.png)
-![replace1](images/replace1.png)
-![replace2](images/replace2.png)
-![config2](images/config2.png)
+选中文本，右键collect 准备设置国际化唯一标识<br>
+![collect1](images/collect1.png)<br>
+设置国际化唯一标识<br>
+![collect2](images/collect2.png)<br>
+查看选择查看结果<br>
+![result1](images/result1.png)<br>
+结果展示<br>
+![result2](images/result2.png)<br>
+选中文本 右键选择replace，准备替换文本为方法函数文本<br>
+![replace1](images/replace1.png)<br>
+该位置选中的文本已经替换成了函数<br>
+![replace2](images/replace2.png)<br>
+setting设置，funcName 表示转换的方法名称，如果是formatMessage('a.d.c'),这样就不加-<br>
+如果是传入的对象则加入-id，-defaultMessage,参数可以加入默认message<br>
+![config2](images/config2.png)<br>
 
 ## contact
 
